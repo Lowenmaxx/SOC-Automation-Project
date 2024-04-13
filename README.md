@@ -19,9 +19,33 @@ The primary objective of this SOC automation project is to gain hands-on experie
 - Mimikatz: to simulate malicious activities on the Windows 10 VM, generating telemetry data captured by Sysmon.
 
 ## Steps
+
+#### Diagram
 Step 1: Make a network diagram using Draw.io.
 
 *Ref 1: Network Diagram*
 
 ![SOC-Automation-Project-diagram drawio](https://github.com/Lowenmaxx/SOC-Automation-Project/assets/112909141/ffdc172d-ab63-4ce6-976f-038f4773cf66)
+
+
+#### Install tools
+
+Step 1: Install
+<a href="https://www.virtualbox.org/"><img src="https://img.shields.io/badge/-VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white" /></a> which is needed to make virtual machines (Add which machines later).
+
+Step 2: Install
+<a href="https://www.microsoft.com/en-us/software-download/windows10"><img src="https://img.shields.io/badge/-Windows%2010-0078D6?style=for-the-badge&logo=Windows&logoColor=white" /></a> media creation tool to make a ISO image.
+Step 3: use the ISO file to make a VM using the Windows 10 ISO image
+
+Step 4: Download
+<a href="https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon"><img src="https://img.shields.io/badge/-Sysmon-0078D4?style=for-the-badge&logo=Windows&logoColor=white" /></a> and
+<a href="https://github.com/olafhartong/sysmon-modular/blob/master/sysmonconfig.xml"><img src="https://img.shields.io/badge/-Sysmon%20Modular-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+
+Step 5: Open PowerShell in administrator mode. Use cd (directory here) to change the directory to where you have your unzipped sysmon.
+
+Step 6: Move the sysmonconfig.xml to the same folder as the sysmon folder.
+
+Step 7: use the command .\Sysmon64.exe -i .\sysmonconfig.xml in Powershell to install sysmon.
+
+Step 8: Download<a href="https://ubuntu.com/download/desktop"><img src="https://img.shields.io/badge/-Ubuntu%20Desktop-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" /></a> ISO file to make another VM.
 
