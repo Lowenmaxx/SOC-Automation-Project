@@ -51,4 +51,5 @@ Step 8: Download<a href="https://ubuntu.com/download/desktop"><img src="https://
 
 Step 9: Follow this guide to install Wazuh <a href="https://www.youtube.com/watch?v=3CfjoCQmpo8"><img src="https://img.shields.io/badge/-YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" /></a>
 
+Step 10: Make another Ubuntu VM and follow These instructions to Download the hive <a href="https://github.com/MyDFIR/SOC-Automation-Project/blob/main/TheHive-Install-Instructions"><img src="https://img.shields.io/badge/-TheHive-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 
