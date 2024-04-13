@@ -49,3 +49,6 @@ Step 7: use the command .\Sysmon64.exe -i .\sysmonconfig.xml in Powershell to in
 
 Step 8: Download<a href="https://ubuntu.com/download/desktop"><img src="https://img.shields.io/badge/-Ubuntu%20Desktop-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" /></a> ISO file to make another VM.
 
+Step 9: Follow this guide to install Wazuh <a href="https://www.youtube.com/watch?v=3CfjoCQmpo8"><img src="https://img.shields.io/badge/-YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" /></a>
+
+
