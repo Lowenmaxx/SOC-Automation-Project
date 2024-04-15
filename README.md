@@ -4,11 +4,12 @@
 
 The primary objective of this SOC automation project is to gain hands-on experience in setting up, configuring, and operating a Security Operations Center in a simulated environment. Gain familiarity with various open-source tools commonly used in real-world SOCs, including Wazuh for alert generation, Shuffle for Security Orchestration, Automation, and Response (SOAR), and TheHive for case management. This lab aims to simulate cybersecurity incidents to make it possible to practice incident detection, analysis, and response procedures in a controlled setting. This also teaches how to integrate different security tools seamlessly to streamline the incident response process and enhance efficiency. The lab incorporates threat intelligence enrichment capabilities, enabling analysts to enrich Indicators of Compromise (IOCs) using services like VirusTotal.
 
-### Skills Learned
+## Skills Learned
 
 - How to make a network diagram to understand the flow
-
-### Tools Used
+- How to set up VMs
+- Configuring TheHive and Wazuh Server
+## Tools Used
 
 - Draw.io: used to make network diagram
 - Windows 10 Virtual Machine: Set up a Windows 10 virtual machine to serve as an endpoint for telemetry generation using Sysmon.
@@ -20,7 +21,7 @@ The primary objective of this SOC automation project is to gain hands-on experie
 
 ## Steps
 
-#### Diagram
+### Diagram
 Step 1: Make a network diagram using Draw.io.
 
 *Ref 1: Network Diagram*
@@ -28,7 +29,7 @@ Step 1: Make a network diagram using Draw.io.
 ![SOC-Automation-Project-diagram drawio](https://github.com/Lowenmaxx/SOC-Automation-Project/assets/112909141/ffdc172d-ab63-4ce6-976f-038f4773cf66)
 
 
-#### Install tools
+### Install tools
 
 Step 1: Install
 <a href="https://www.virtualbox.org/"><img src="https://img.shields.io/badge/-VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white" /></a> which is needed to make virtual machines (Add which machines later).
@@ -53,3 +54,6 @@ Step 9: Follow this guide to install Wazuh <a href="https://www.youtube.com/watc
 
 Step 10: Make another Ubuntu VM and follow These instructions to Download the hive <a href="https://github.com/MyDFIR/SOC-Automation-Project/blob/main/TheHive-Install-Instructions"><img src="https://img.shields.io/badge/-TheHive-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 
+### Configure TheHive & Wazuh Server
+
+Step 1: 
