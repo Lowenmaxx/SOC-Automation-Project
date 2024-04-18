@@ -97,7 +97,12 @@ Step 19: find application.baseUrl and change localhost to your IP
 
 Step 20: Next start thehive by using systemctl start thehive.service, then enable it by using systemctl enable thehive.service, and check the status by using systemctl status thehive.service (If thehive does not start make sure elasticsearch and cassandra are running) ![image](https://github.com/Lowenmaxx/SOC-Automation-Project/assets/112909141/c53772ad-1509-4cd2-99e2-798fa6b49212)
 
-Step 21: 
+Step 21: Open a browser and go to HTTP://(TheHive IP):9000 and you should be able to access thehive. 
+
+Login: admin@thehive.local 
+
+Password: secret
+
 ### Wazuh Server
 
-
+Step 1:
