@@ -54,6 +54,50 @@ Step 9: Follow this guide to install Wazuh <a href="https://www.youtube.com/watc
 
 Step 10: Make another Ubuntu VM and follow These instructions to Download the hive <a href="https://github.com/MyDFIR/SOC-Automation-Project/blob/main/TheHive-Install-Instructions"><img src="https://img.shields.io/badge/-TheHive-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 
-### Configure TheHive & Wazuh Server
+### Configure TheHive
 
-Step 1: 
+Step 1: Boot up TheHive VM, open the terminal, and use the command sudo nano /etc/cassandra/cassandra.yaml
+
+Step 2: From here, you can change the name of the cluster and other settings; press ctrl+w to find the listen address and replace localhost with your IP.
+
+Step 3: Hold ctrl+w to find rpc_address(you might have to scroll down to find it) and replace localhost with your IP address.
+
+Step 4: hold ctrl+w to find seed_provider. Where it says seeds: "127.0.0.1:7000" replace 127.0.0.1 with your IP. Then, hit ctrl+x to save the changes.
+
+Step 5: stop cassandra service by using systemctl stop cassandra.service in the terminal.
+
+Step 6: Remove old files by using sudo rm -rf /var/lib/cassandra/*
+
+Step 7: Start Cassandra service by using systemctl start cassandra.service and check it is running by using systemctl status cassandra.service ![image](https://github.com/Lowenmaxx/SOC-Automation-Project/assets/112909141/7ebea622-b7f6-44c0-955e-044da8d71f48)
+
+Step 8: do the command sudo nano /etc/elasticsearch/elasticsearch.yml
+
+Step 9: uncomment cluster.name and change the name to thehive.
+
+Step 10: uncomment node.name
+
+Step 11: uncomment network.host and change the IP to your IP. 
+
+Step 12: Next start elasticsearch by using systemctl start elasticsearch.service, then enable it by using systemctl enable elasticsearch.service, and check the status using systemctl status elasticsearch.service ![image](https://github.com/Lowenmaxx/SOC-Automation-Project/assets/112909141/d468fcdc-a36b-48aa-9986-e6356631cbbb)
+
+
+Step 13: we have to make sure thehive has access to the directories it needs we check this by doing ls -la /opt/thp. ![image](https://github.com/Lowenmaxx/SOC-Automation-Project/assets/112909141/1a0d53df-75c8-4918-9bd5-4eae0c77d948)
+
+Step 14: To give thehive permissions to the directories it needs we do sudo chown -R thehive:thehive /opt/thp. ![image](https://github.com/Lowenmaxx/SOC-Automation-Project/assets/112909141/44aaecc4-45d9-4800-8d43-684217ccca33)
+
+Step 15: It's time to configure thehive itself. Use sudo nano /etc/the hive/application.conf
+
+Step 16: go down to where it says hostname and change the IP to your IP
+
+Step 17: change the cluster-name to the same name you have on Cassandra
+
+Step 18: go down again and change the hostname to your IP.
+
+Step 19: find application.baseUrl and change localhost to your IP
+
+Step 20: Next start thehive by using systemctl start thehive.service, then enable it by using systemctl enable thehive.service, and check the status by using systemctl status thehive.service (If thehive does not start make sure elasticsearch and cassandra are running) ![image](https://github.com/Lowenmaxx/SOC-Automation-Project/assets/112909141/c53772ad-1509-4cd2-99e2-798fa6b49212)
+
+Step 21: 
+### Wazuh Server
+
+
