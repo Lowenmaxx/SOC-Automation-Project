@@ -97,12 +97,22 @@ Step 19: find application.baseUrl and change localhost to your IP
 
 Step 20: Next start thehive by using systemctl start thehive.service, then enable it by using systemctl enable thehive.service, and check the status by using systemctl status thehive.service (If thehive does not start make sure elasticsearch and cassandra are running) ![image](https://github.com/Lowenmaxx/SOC-Automation-Project/assets/112909141/c53772ad-1509-4cd2-99e2-798fa6b49212)
 
-Step 21: Open a browser and go to HTTP://(TheHive IP):9000 and you should be able to access thehive. 
+Step 21: Open a browser and go to HTTP://(TheHive IP):9000. You should be able to access thehive. 
 
 Login: admin@thehive.local 
 
 Password: secret
 
-### Wazuh Server
+### Wazuh Server Configuration
 
-Step 1:
+Step 1: Login to wazuh on the Windows 10 VM
+
+Step 2: Click on Add Agent and select Windows. (We are using a Windows machine for this lab.)
+
+Step 3: Enter the IP address for the wazuh server
+
+Step 4: OPTIONAL make a name for the agent.
+
+Step 5: Copy the command, open PowerShell in admin mode, paste the command, and run it
+
+Step 6: use the command NET START WazuhSvc to start up wazuh agent
