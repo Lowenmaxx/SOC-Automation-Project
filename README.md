@@ -111,7 +111,7 @@ Step 2: Click on Add Agent and select Windows. (We are using a Windows machine f
 
 Step 3: Enter the IP address for the wazuh server
 
-Step 4: OPTIONAL make a name for the agent.
+Step 4: OPTIONAL: Make a name for the agent.
 
 Step 5: Copy the command, open PowerShell in admin mode, paste the command, and run it
 
@@ -119,23 +119,23 @@ Step 6: use the command NET START WazuhSvc to start up wazuh agent
 
 ### Configure Wazuh agent
 
-Step 1: on the Windows 10 VM open File Explorer and go to c:\Program Files (x86)\ossec-agent
+Step 1: on the Windows 10 VM, open File Explorer and go to c:\Program Files (x86)\ossec-agent
 
-Step 2: Open ossec.conf with notepad in admin mode
+Step 2: Open ossec.conf with Notepad in admin mode
 
 Step 3: make a backup of the file before making any edits.
 
 Step 4: Scroll down to Log analysis and copy one of the local file tags
 ![image](https://github.com/Lowenmaxx/SOC-Automation-Project/assets/112909141/9ea8c373-202f-4db8-bba4-f2316cd6bc01)
 
-Step 5: We need to add the sysmon ID to the ossec.conf to find it open event viewer. click on the arrow for Applications and Services > Microsoft > Windows > Sysmon.
+Step 5: We need to add the sysmon ID to the ossec.conf to find it in the open event viewer. Click on the arrow for Applications and Services > Microsoft > Windows > Sysmon.
 
-Step 6: Right click Operational and click Properties copy the full name.
+Step 6: Right-click Operational, click Properties, and copy the full name.
 
 Step 7: go back to the ossec.conf file and replace where it says application with the full name you copied.![image](https://github.com/Lowenmaxx/SOC-Automation-Project/assets/112909141/4179c43c-ec32-4998-9a32-b2449d2f9dd0)![image](https://github.com/Lowenmaxx/SOC-Automation-Project/assets/112909141/666cafe2-3b8a-40a3-ae59-056d24b5737d)
 
-Extra Information: if you wanted the wazuh agent to report things related to powershell you can do the same steps done for sysmon for powershell instead.
+Extra Information: If you want the Wazuh agent to report things related to PowerShell, you can follow the same steps for Sysmon for PowerShell instead.
 
-Step 8: remove evrything from the Log analysis except for the Sysmon and active-response to make it easier for us to see the events we want to see.
+Step 8: Remove everything from the Log analysis except for the Sysmon and active response to make it easier for us to see the events we want to see.
 
-Step 9: open services and restart Wazuh service (always do this after changing configuarations.
+Step 9: open services and restart the Wazuh service (always do this after changing configurations)
